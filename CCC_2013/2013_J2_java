@@ -1,0 +1,31 @@
+import java.util.Scanner;
+import java.lang.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String word = sc.nextLine();
+        int counter = 0;
+
+        char [] split_word = new char[word.length()];
+        for (int j = 0; j < word.length(); j++) {
+            split_word[j] = word.charAt(j);
+        }
+        int i = split_word.length;
+
+        for (char c: split_word) {
+            if ((c == 'I') || (c == 'O') || (c == 'S') || (c == 'H') || (c == 'Z') || (c == 'X') || (c == 'N')) {
+                counter += 1;
+            } else {
+                System.out.println("NO");
+                break;
+            }
+            if (counter == i) {
+                System.out.println("YES");
+            }
+        }
+
+    }
+}

@@ -1,0 +1,20 @@
+n = int(input())
+a = input()
+b = input()
+
+counter = 0
+max_days = 0
+swifts_sum = 0
+sema_sum = 0
+
+swifts = a.split()
+sema = b.split()
+
+for i in range(n):
+    swifts_sum += int(swifts[counter])
+    sema_sum += int(sema[counter])
+    counter += 1
+    if swifts_sum == sema_sum:
+        max_days = counter
+
+print(max_days)

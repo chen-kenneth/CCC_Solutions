@@ -1,0 +1,71 @@
+import sys
+
+a = 0
+b = 0
+
+ContinueLoop = True
+
+while ContinueLoop == True:
+    n = input().split()
+
+    if n[0] == "1":
+        if n[1] == "A":
+            a = int(n[2])
+        elif n[1] == "B":
+            b = int(n[2])
+
+    if n[0] == "2":
+        if n[1] == "A":
+            print(a)
+        elif n[1] == "B":
+            print(b)
+
+    if n[0] == "3":
+        if n[1] == "A":
+            if n[2] == "A":
+                a += a
+            elif n[2] == "B":
+                a += b
+        elif n[1] == "B":
+            if n[2] == "A":
+                b += a
+            elif n[2] == "B":
+                b += b
+    if n[0] == "4":
+        if n[1] == "A":
+            if n[2] == "A":
+                a = a**a
+            elif n[2] == "B":
+                a = a*b
+        elif n[1] == "B":
+            if n[2] == "A":
+                b = a*b
+            elif n[2] == "B":
+                b = b**2
+
+    if n[0] == "5":
+        if n[1] == "A":
+            if n[2] == "A":
+                a -= a
+            elif n[2] == "B":
+                a -= b
+        elif n[1] == "B":
+            if n[2] == "A":
+                b -= a
+            elif n[2] == "B":
+                b -= b
+
+    if n[0] == "6":
+        if n[1] == "A":
+            if n[2] == "A":
+                a = a//a
+            elif n[2] == "B":
+                a = a//b
+        if n[1] == "B":
+            if n[2] == "A":
+                b = b//a
+            if n[2] == "B":
+                b = b//b
+    
+    if n[0] == "7":
+        sys.exit(0)

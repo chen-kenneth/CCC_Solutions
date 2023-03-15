@@ -1,0 +1,21 @@
+import sys
+
+t1 = int(input())
+t2 = int(input())
+diff = t1 - t2
+counter = 3
+
+while diff <= t2:
+    counter += 2
+    t1 = t1 - t2
+    t2 = t2 - t1
+    diff = t1 - t2
+    if t2 > t1:
+        counter -= 1
+        print(counter)
+        sys.exit(0)
+
+
+
+
+print(counter)

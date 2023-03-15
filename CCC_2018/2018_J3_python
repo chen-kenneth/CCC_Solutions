@@ -1,0 +1,7 @@
+a, b, c, d = input().split()
+
+print("0 " + str(a) + " " + str(int(a) + int(b)) + " " + str(int(a) + int(b) + int(c)) + " " + str(int(a) + int(b) + int(c) + int(d)))
+print(str(a) + " 0 " + str(b) + " " + str(int(b) + int(c)) + " " + str(int(b) + int(c) + int(d)))
+print(str(int(a) + int(b)) + " " + str(b) + " 0 " + str(c) + " " + str(int(c) + int(d)))
+print(str(int(a) + int(b) + int(c)) + " " + str(int(b) + int(c)) + " " + str(c) + " 0 " + str(d))
+print(str(int(a) + int(b) + int(c) + int(d)) + " " + str(int(b) + int(c) + int(d)) + " " + str(int(c) + int(d)) + " " + str(d) + " 0")

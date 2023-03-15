@@ -1,0 +1,5 @@
+young = int(input())
+middle = int(input())
+diff = middle - young
+old = middle + diff
+print(old)

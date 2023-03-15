@@ -1,0 +1,17 @@
+n = int(input())
+a_score = 100
+d_score = 100
+
+for i in range(n):
+    a, d = input().split()
+    a_int = int(a)
+    d_int = int(d)
+    if a_int > d_int:
+        d_score = d_score - a_int
+    elif d_int > a_int:
+        a_score = a_score - d_int
+    else:
+        continue
+
+print(a_score)
+print(d_score)

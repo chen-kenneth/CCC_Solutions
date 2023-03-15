@@ -1,0 +1,17 @@
+t = input()
+s = input()
+shift = False
+
+for i in range(len(s)):
+    s1 = s[:i]
+    s2 = s[i:]
+    shifted_text = s2 + s1
+    if shifted_text in t:
+        shift = True
+        break
+
+
+if shift:
+    print("yes")
+else:
+    print("no")

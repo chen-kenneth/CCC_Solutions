@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main (String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int h = sc.nextInt();
+        int m = sc.nextInt();
+        int t = 1;
+
+        while (t <= m) {
+            if ((-6*t*t*t*t + h*t*t*t + 2*t*t + t) <= 0) {
+                System.out.println("The balloon first touches ground at hour: ");
+                System.out.println(t);
+                break;
+            } else {
+                t++;
+            }
+        }
+
+        if (t > m) {
+            System.out.println("The balloon does not touch ground in the given time.");
+        }
+
+
+    }
+}

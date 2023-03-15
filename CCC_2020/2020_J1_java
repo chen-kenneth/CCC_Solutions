@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        int small = sc.nextInt();
+        int medium = sc.nextInt();
+        int large = sc.nextInt();
+        
+        int happiness = small * 1 + medium * 2 + large * 3;
+        
+        if (happiness >= 10) {
+            System.out.println("happy");
+        } else {
+            System.out.println("sad");
+        }
+
+    }
+}

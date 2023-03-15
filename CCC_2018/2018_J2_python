@@ -1,0 +1,16 @@
+n = int(input())
+a = input()
+b = input()
+
+counter = 0
+counter_2 = 0
+
+l1 = list(a)
+l2 = list(b)
+
+for i in l1:
+    if (l1[counter] == "C") and (l2[counter] == "C"):
+        counter_2 += 1
+    counter += 1
+
+print(counter_2)

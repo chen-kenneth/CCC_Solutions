@@ -1,0 +1,21 @@
+n = int(input())
+student_responses = []
+correct_responses = []
+count = 0
+mark = 0
+
+for i in range(n):
+    response = input()
+    student_responses.append(response)
+for i in range(n):
+    response = input()
+    correct_responses.append(response)
+
+for i in student_responses:
+    if student_responses[count] == correct_responses[count]:
+        mark += 1
+        count += 1
+    else:
+        count += 1
+
+print(mark)

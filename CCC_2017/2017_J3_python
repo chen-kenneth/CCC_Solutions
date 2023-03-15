@@ -1,0 +1,15 @@
+a, b = input().split()
+c, d = input().split()
+t = int(input())
+
+xchange = int(c) - int(a)
+ychange = int(d) - int(b)
+change_sum = max(xchange, xchange*-1) + max(ychange, ychange*-1)
+
+if t - change_sum < 0:
+    print("N")
+else:
+    if t % 2 != change_sum % 2:
+        print("N")
+    else:
+        print("Y")
