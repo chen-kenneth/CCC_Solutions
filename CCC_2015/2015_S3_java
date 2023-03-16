@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int G = sc.nextInt();
+        int P = sc.nextInt();
+
+        int[] gates = new int[G + 1];
+        int total = 0;
+        
+        while(P-- > 0){
+            int plane = sc.nextInt();
+
+            while(plane > 0 && gates[plane] > 0){
+                int temp = gates[plane];
+                gates[plane]++;
+                plane -= temp;
+            }
+
+            if(plane == 0){
+                break;
+            }else{
+                gates[plane] = 1;
+                total++;
+            }
+        }
+        
+        System.out.println(total);
+    }
+}

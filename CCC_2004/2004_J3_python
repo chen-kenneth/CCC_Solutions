@@ -1,0 +1,16 @@
+adj = []
+noun = []
+n = int(input())
+m = int(input())
+
+for i in range(n):
+  word = input()
+  adj.append(word)
+
+for i in range(m):
+  word = input()
+  noun.append(word)
+
+for a in adj:
+  for b in noun:
+    print(a,'as',b)

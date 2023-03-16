@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class S2 {
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+
+        Map<Character, Integer> map = new HashMap<>();
+        map.put('I', 1);
+        map.put('V', 5);
+        map.put('X', 10);
+        map.put('L', 50);
+        map.put('C', 100);
+        map.put('D', 500);
+        map.put('M', 1000);
+
+        String s = sc.nextLine();
+        int sum = 0;
+
+        for(int i = 0; i < s.length() - 2; i+=2){
+            int number = s.charAt(i) - '0';
+            char currentC = s.charAt(i + 1);
+            char nextC = s.charAt(i + 3);
+
+            if(map.get(currentC) >= map.get(nextC)){
+                sum += number * map.get(currentC);
+            }else{
+                sum -= number * map.get(currentC);
+            }
+        }
+        int number = s.charAt(s.length() - 2) - '0';
+        char currentC = s.charAt(s.length() - 1);
+        sum += number * map.get(currentC);
+
+        System.out.println(sum);
+
+    }
+}

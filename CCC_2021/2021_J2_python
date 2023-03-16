@@ -1,0 +1,11 @@
+n = int(input())
+winning_name = ''
+winning_bid = 0
+
+for i in range(n):
+    name = input()
+    bid = int(input())
+    if bid > winning_bid:
+        winning_bid = bid
+        winning_name = name
+print(winning_name)

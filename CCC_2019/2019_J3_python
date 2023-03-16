@@ -1,0 +1,23 @@
+k = int(input())
+
+for i in range(k):
+  l = []
+  rep_num = 0
+  prev_char = ''
+  s = input()
+  s = list(s)
+  rep_num += 1
+  prev_char = s[0]
+  s.pop(0)
+  s.append('end')
+  for i in s:
+    if i == prev_char:
+      rep_num += 1
+      prev_char = i
+    else:
+      l.append(str(rep_num))
+      l.append(prev_char)
+      rep_num = 1
+      prev_char = i
+  answer = ' '.join(l)
+  print(answer)
